@@ -5,20 +5,8 @@ let score = JSON.parse(localStorage.getItem('score')) || {
         }; 
 
         updatescoreElement();
-    /*if(!score){
-        score = {
-            wins:0,
-            losses:0,
-            ties:0
-        };
-    }   */
-
 let isAutoPlaying = false; // this variable is used to create to stop autoplay
 let intervalId;
-
-//const autoplay = () => {
-
-//};
 function autoplay(){
     if(!isAutoPlaying){
     intervalId = setInterval(function(){ // if we create a variable in this line every time when we are running this code we can get a different ID.
@@ -62,23 +50,6 @@ document.body.addEventListener('keydown', (event) => {
 
 
 } )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function playGame(playerMove) {
     const computerMove = pickComputerMove();
     let result = '';
@@ -124,8 +95,6 @@ function playGame(playerMove) {
     <img src = "images/${playerMove}-emoji.png" class="move-icon">
     <img src = "images/${computerMove}-emoji.png" class="move-icon">
     Computer`;
-
-    /*alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}\nWins: ${score.wins}, Losses:${score.losses}, Ties:${score.ties}`);*/
 }
 
 
